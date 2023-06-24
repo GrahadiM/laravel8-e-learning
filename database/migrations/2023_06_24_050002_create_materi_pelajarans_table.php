@@ -17,9 +17,11 @@ class CreateMateriPelajaransTable extends Migration
             $table->id();
             $table->unsignedBigInteger('mapel_id');
             $table->unsignedBigInteger('dosen_id');
-            $table->string('materi_judul');
-            $table->string('materi_nama');
-            $table->string('materi_kelas');
+            $table->string('judul');
+            $table->string('kelas');
+            $table->string('jenis')->comment('PDF');
+            $table->string('pertanyaan')->nullable();
+            $table->text('deskripsi')->nullable();
             $table->timestamps();
         });
     }
